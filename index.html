@@ -406,47 +406,55 @@
     }
 
     .memory-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      width: 100%;
-    }
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
 
-    .memory-row.reverse {
-      flex-direction: row-reverse;
-    }
+/* AGAR BINGKAI KEDUA POSISINYA DI KANAN */
+.memory-row.reverse {
+  flex-direction: row-reverse;
+}
 
-    .heart-wrapper {
-      width: 125px;
-      height: 115px;
-      flex-shrink: 0;
-      position: relative;
-      transform: translateZ(0);
-      filter: drop-shadow(0 6px 12px rgba(140, 90, 69, 0.28));
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      cursor: pointer;
-    }
+/* KUNCI BINGKAI HATI AGAR TIDAK TERDORONG / MEMBESAR */
+.heart-wrapper {
+  width: 125px;
+  height: 115px;
+  flex: 0 0 125px;
+  flex-shrink: 0;
+  min-width: 125px;
+  max-width: 125px;
+  position: relative;
+  transform: translateZ(0);
+  filter: drop-shadow(0 6px 12px rgba(140, 90, 69, 0.28));
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
 
-    .heart-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      -webkit-clip-path: url(#heartClip);
-      clip-path: url(#heartClip);
-      display: block;
-    }
+.heart-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-clip-path: url(#heartClip);
+  clip-path: url(#heartClip);
+  display: block;
+}
 
-    .heart-description {
-      flex: 1;
-      font-family: 'Caveat', cursive;
-      font-size: 1.1rem;
-      color: #5c3d2e;
-      background: rgba(244, 233, 215, 0.65);
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1.5px dashed #c5a880;
-      line-height: 1.45;
-    }
+/* KOTAK TEKS MENYESUAIKAN RUANG & MELEKUK OTOMATIS */
+.heart-description {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: #5c3d2e;
+  background: rgba(244, 233, 215, 0.65);
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px dashed #c5a880;
+  line-height: 1.45;
+}
 
     .circle-grid-wrapper {
       display: grid;
